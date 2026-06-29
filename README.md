@@ -6,14 +6,5 @@ This Language was made by >§_Nix_gabg_§<  or my second name >§_Kilian_§<
 To make the launcher work create a .escr file (check ecsr.wiki.html/the site on github to make the code)
 then drag and drop the .ecsr file you made on the launcher (escr.launcher.bat)
 
------------------------------------:::::::::::WARNING:::::::::::-------------------------------
-
-do not abuse the delete file command it could be dangerous if you do it you may delete the wrong file
-
-=00==0===0=0===0===0===0==0===0====00==00==0===0====00=0=00==0====00=0==0====0===00=0===0===00====0===
-|--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- |
-! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  !
-! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!USE THE FILE COMMANDS AT YOUR OWN RISK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  !
-! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  !
-|--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- |
-=00==0===0=0===0===0===0==0===0====00==00==0===0====00=0=00==0====00=0==0====0===00=0===0===00====0===
+# --------------------------:::::::::::WARNING:::::::::::---------------------------
+#### do not abuse the delete file command it could be dangerous if you run it wrong you may delete the wrong file
