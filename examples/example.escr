@@ -1,0 +1,17 @@
+// Iniziamo impostando il colore
+theme("orange")
+say("Initializing Easy Script Engine Engine...")
+wait[2]
+
+clear
+say("Checking system statistics:")
+date
+time
+myip
+
+say("Now looking for target directory payload...")
+if file[*] number[5]
+
+say("Execution loop completed successfully.")
+pause
+end

@@ -1,0 +1,81 @@
+// Easy Script Demo
+
+theme("blue")
+
+say("===================================")
+say("      Easy Script Demo v1.0")
+say("===================================")
+
+beep
+
+say("")
+say("Current date:")
+date
+
+say("")
+say("Current time:")
+time
+
+say("")
+say("System information:")
+sysinfo
+
+say("")
+say("Local IPv4 Address:")
+myip
+
+say("")
+say("MAC Address(es):")
+macaddress
+
+say("")
+say("System uptime:")
+uptime
+
+say("")
+say("Files in this folder:")
+list files
+
+say("")
+say("Folders in this folder:")
+list folders
+
+say("")
+say("Waiting for 2 seconds...")
+wait[2]
+
+say("")
+say("Testing folder creation...")
+create folder("DemoFolder")
+
+say("Folder created!")
+
+say("")
+say("Testing file deletion...")
+delete file("old_test.txt")
+
+say("If old_test.txt existed, it has been deleted.")
+
+say("")
+say("Checking the special file-count command...")
+if file[*] number[5]
+
+say("")
+say("Playing another beep...")
+beep
+
+theme("green")
+
+say("")
+say("Demo complete!")
+
+pause
+
+clear
+
+theme("white")
+
+say("Thanks for trying Easy Script!")
+
+end
+end

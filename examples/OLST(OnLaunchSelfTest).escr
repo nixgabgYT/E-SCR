@@ -1,0 +1,10 @@
+//OLST-(OnLaunchSelfTest)
+say("OLST")
+beep
+theme("orange")
+theme("green")
+theme("blue")
+theme("white")
+theme("orange")
+beep
+pause

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Easy Script (.escr) Documentation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#111214;
+    color:#d7dae0;
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    display:flex;
+}
+
+.sidebar{
+    width:260px;
+    background:#17191c;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    overflow:auto;
+    border-right:1px solid #23272a;
+}
+
+.sidebar h2{
+    color:#1793d1;
+    padding:20px;
+    font-size:22px;
+}
+
+.sidebar h3{
+    color:#ff8800;
+    padding:0 20px 10px;
+    font-size:14px;
+    text-transform:uppercase;
+}
+
+.sidebar a{
+    display:block;
+    padding:10px 20px;
+    color:#aab2bf;
+    text-decoration:none;
+    border-left:3px solid transparent;
+    transition:.2s;
+}
+
+.sidebar a:hover{
+    background:#21252b;
+    border-left-color:#ff8800;
+    color:white;
+}
+
+.content{
+    margin-left:260px;
+    width:100%;
+    padding:40px;
+}
+
+header{
+    border-bottom:2px solid #1793d1;
+    padding-bottom:20px;
+    margin-bottom:35px;
+}
+
+header h1{
+    color:#1793d1;
+    font-size:34px;
+}
+
+header p{
+    margin-top:10px;
+    color:#abb2bf;
+}
+
+section{
+    margin-bottom:55px;
+}
+
+section h2{
+    color:#ff8800;
+    border-bottom:1px solid #282c34;
+    padding-bottom:8px;
+    margin-bottom:18px;
+}
+
+.cmd-box{
+    background:#1e222b;
+    border:1px solid #282c34;
+    border-radius:7px;
+    padding:16px;
+    margin-bottom:14px;
+}
+
+code{
+    color:#98c379;
+    font-family:Consolas,monospace;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.desc{
+    margin-top:8px;
+    color:#abb2bf;
+    line-height:1.6;
+}
+
+.badge{
+    display:inline-block;
+    background:#444c56;
+    color:white;
+    padding:2px 8px;
+    border-radius:5px;
+    font-size:11px;
+}
+
+pre{
+    white-space:pre-wrap;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Easy Script</h2>
+<h3>.ESCR Wiki</h3>
+
+<a href="#syntax">Syntax</a>
+<a href="#ui">UI & Terminal</a>
+<a href="#system">System</a>
+<a href="#files">Files</a>
+<a href="#network">Network</a>
+<a href="#power">Power</a>
+<a href="#timing">Timing</a>
+<a href="#themes">Themes</a>
+<a href="#examples">Examples</a>
+<a href="#runtime">Runtime</a>
+
+</div>
+
+<div class="content">
+
+<header>
+
+<h1>Easy Script (.escr)</h1>
+
+<p>
+Lightweight Windows scripting language built for automation,
+terminal utilities and system management.
+</p>
+
+</header>
+
+<section id="syntax">
+
+<h2>01. Syntax Rules</h2>
+
+<div class="cmd-box">
+<code>// Comment</code>
+
+<div class="desc">
+Everything beginning with // is ignored by the interpreter.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>end</code>
+
+<div class="desc">
+Stops script execution.
+</div>
+
+</div>
+
+</section>
+
+<section id="ui">
+
+<h2>02. UI & Terminal</h2>
+
+<div class="cmd-box">
+<code>say("Hello")</code>
+
+<div class="desc">
+Prints text to the console.
+</div>
+</div>
+
+<div class="cmd-box">
+<code>clear</code>
+
+<div class="desc">
+Clears the console.
+</div>
+</div>
+
+<div class="cmd-box">
+<code>pause</code>
+
+<div class="desc">
+Waits until the user presses a key.
+</div>
+</div>
+
+<div class="cmd-box">
+<code>beep</code>
+
+<div class="desc">
+Plays the default Windows beep.
+</div>
+</div>
+
+<div class="cmd-box">
+<code>theme("orange")</code>
+
+<div class="desc">
+Changes the console color.
+
+<br><br>
+
+<span class="badge">
+orange • green • blue • white
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="system">
+
+<h2>03. System Information</h2>
+
+<div class="cmd-box">
+<code>sysinfo</code>
+
+<div class="desc">
+Displays operating system information.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>date</code>
+
+<div class="desc">
+Shows today's date.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>time</code>
+
+<div class="desc">
+Displays the current system time.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>uptime</code>
+
+<div class="desc">
+Shows how long Windows has been running.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>myip</code>
+
+<div class="desc">
+Displays the local IPv4 address.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>macaddress</code>
+
+<div class="desc">
+Lists MAC addresses.
+</div>
+
+</div>
+
+</section>
+
+<section id="files">
+
+<h2>04. File Management</h2>
+
+<div class="cmd-box">
+<code>list files</code>
+
+<div class="desc">
+Lists every file in the current directory.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>list folders</code>
+
+<div class="desc">
+Lists every folder in the current directory.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>create folder("Demo")</code>
+
+<div class="desc">
+Creates a new folder.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>delete file("example.txt")</code>
+
+<div class="desc">
+Deletes the selected file.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>if file[*] number[5]</code>
+
+<div class="desc">
+Checks whether exactly five files exist.
+</div>
+
+</div>
+
+</section>
+<section id="network">
+
+<h2>05. Network</h2>
+
+<div class="cmd-box">
+<code>myip</code>
+
+<div class="desc">
+Displays the local IPv4 address.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>macaddress</code>
+
+<div class="desc">
+Lists every detected MAC address.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>ping server</code>
+
+<div class="desc">
+Pings the configured local server.
+</div>
+
+</div>
+
+</section>
+
+<section id="power">
+
+<h2>06. Power Commands</h2>
+
+<div class="cmd-box">
+<code>pc shutdown</code>
+
+<div class="desc">
+Schedules a Windows shutdown after 60 seconds.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>pc abort</code>
+
+<div class="desc">
+Cancels a scheduled shutdown.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>end</code>
+
+<div class="desc">
+Ends the currently running script.
+</div>
+
+</div>
+
+</section>
+
+<section id="timing">
+
+<h2>07. Timing</h2>
+
+<div class="cmd-box">
+<code>wait[1]</code>
+
+<div class="desc">
+Pauses the script for one second.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>wait[5]</code>
+
+<div class="desc">
+Pauses the script for five seconds.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>pause</code>
+
+<div class="desc">
+Waits until the user presses a key.
+</div>
+
+</div>
+
+</section>
+
+<section id="themes">
+
+<h2>08. Console Themes</h2>
+
+<div class="cmd-box">
+<code>theme("orange")</code>
+
+<div class="desc">
+Applies the orange terminal theme.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>theme("green")</code>
+
+<div class="desc">
+Applies the green terminal theme.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>theme("blue")</code>
+
+<div class="desc">
+Applies the blue terminal theme.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>theme("white")</code>
+
+<div class="desc">
+Restores the default console colors.
+</div>
+
+</div>
+
+</section>
+
+<section id="examples">
+
+<h2>09. Example Script</h2>
+
+<div class="cmd-box">
+
+<pre><code>// Demo Script
+
+theme("blue")
+
+say("Easy Script Demo")
+
+beep
+
+date
+
+time
+
+sysinfo
+
+myip
+
+macaddress
+
+list files
+
+list folders
+
+wait[2]
+
+create folder("Demo")
+
+delete file("old.txt")
+
+if file[*] number[5]
+
+theme("green")
+
+say("Finished!")
+
+pause
+
+clear
+
+theme("white")
+
+end
+</code></pre>
+
+</div>
+
+</section>
+
+ 
+<section id="runtime">
+
+<h2>10. Runtime Information</h2>
+
+<div class="cmd-box">
+<code>Easy Script Engine v1.0</code>
+
+<div class="desc">
+Current runtime version of the Easy Script interpreter.
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>Supported Operating Systems</code>
+
+<div class="desc">
+Windows Vista<br>
+Windows 7<br>
+Windows 8 / 8.1<br>
+Windows 10<br>
+Windows 11
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>File Extension</code>
+
+<div class="desc">
+.escr
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>Interpreter</code>
+
+<div class="desc">
+Windows Batch (.bat)
+</div>
+
+</div>
+
+<div class="cmd-box">
+<code>Execution</code>
+
+<div class="desc">
+Drag and drop a <strong>.escr</strong> file onto the Easy Script Engine executable,
+or run:
+
+<pre><code>escr.launcher.bat [the script that you are trying to launch].escr</code></pre>
+
+</div>
+
+</div>
+
+</section>
+
+<hr style="border:1px solid #282c34;margin:50px 0;">
+
+<footer style="text-align:center;color:#7d8590;">
+
+<h2 style="color:#1793d1;border:none;">
+Easy Script (.escr)
+</h2>
+
+<p>
+A lightweight scripting language for Windows automation.
+</p>
+
+<br>
+
+<p>
+Engine Version <strong>1.0</strong>
+</p>
+
+<br>
+
+<p>
+Designed by >§-Nix-§<
+</p>
+
+</footer>
+
+</div>
+
+</body>
+</html>
+
